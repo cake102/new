@@ -84,14 +84,15 @@ const AdminPage = () => {
             </p>
 
             <div className="flex items-center space-x-2">
-              <label htmlFor="upload-file" className="upload-btn flex items-center cursor-pointer p-2 rounded bg-[#555] text-white" onClick={handleOpenModal}>
+              <label htmlFor="upload-file" className="mt-5 upload-btn flex items-center cursor-pointer p-3 rounded-xl bg-[#555] text-white" onClick={handleOpenModal}>
                 <img src="/upload-icon.svg" alt="Upload Icon" className="admin-upload-icon w-6 h-6 mr-2" />
                 <span>Add File</span>
               </label>
             </div>
           </div>
 
-          <button onClick={handleSave} className="bg-[#06A641] text-white px-4 py-2 rounded hover:bg-blue-600">
+          <button onClick={handleSave} className="bg-[#06A641] text-white px-5 py-2 rounded hover:bg-blue-600 flex items-center">
+          <img src="/save.svg" alt="Upload Icon" className="admin-upload-icon w-4 h-5 mr-2" />
             Save
           </button>
         </div>
@@ -141,8 +142,12 @@ const AdminPage = () => {
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
             >
-              <p>Drag and drop your file here or</p>
-              <button onClick={openFileDialog} className="modal-upload-button bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+              <div className="modal-file-upload bg-[#555] p-4 text-white border-dashed border-2 border-gray-300">  
+              <div className="flex justify-center">
+                <img src="/upload.svg" alt="Upload Icon" className="admin-upload-icon w-12 h-12" />
+              </div>
+              <p className="mt-5">Drag and drop your file here or</p>
+              <button onClick={openFileDialog} className="modal-upload-button bg-blue-500 text-white p-2 rounded hover:bg-blue-600 ml-10 mt-5">
                 Click to select file
               </button>
               <input
@@ -151,6 +156,7 @@ const AdminPage = () => {
                 onChange={(e) => handleFileUpload(e.target.files)}
                 className="hidden"
               />
+            </div>
             </div>
             <button className="modal-save bg-blue-500 text-white p-2 rounded hover:bg-blue-600" onClick={handleSave}>Save</button>
           </div>
