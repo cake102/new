@@ -1,0 +1,14 @@
+/* global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bg-radial-gradient-home {
+    background: radial-gradient(circle at 50% bottom, #600160, #1a001a, #0d000d);
+  }
+}
+
+.page-break {
+  page-break-before: always;
+}
