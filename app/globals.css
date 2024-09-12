@@ -17,7 +17,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 @layer utilities {
@@ -29,4 +29,5 @@ body {
 .input-custom {
   background-color: #828282;
   color: #ffffff; /* Optional: Set text color to white for better contrast */
+  font-family: 'Inter', sans-serif;
 }
