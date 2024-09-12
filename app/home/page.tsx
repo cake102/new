@@ -20,18 +20,18 @@ export default function Home() {
         <p className="text-xl text-center mb-6 text-white">
         seconds. No technical skills required.
         </p>
-      <Link 
-        href="/phone" 
+      <Link
+        href="/phone"
         className="mb-20 flex items-center justify-center bg-[#2B243C] text-white px-6 py-3 rounded-full opacity-80 text-base cursor-pointer transition-colors duration-300 hover:bg-[#6b239e]"
         >
         <img src="/phone 2.svg" alt="Phone Icon" className="mr-2 w-6 h-6" />
         Let’s try Call Voice
       </Link>
       {/* Tambahkan gambar PNG di bagian bawah */}
-      <img 
-        src="/home.png" 
-        alt="Footer Image" 
-        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[1300px] h-auto ml-20"
+      <img
+        src="/home.png"
+        alt="Footer Image"
+        className="absolute at bottom-0 left-1/2 transform -translate-x-1/2 w-[1000px] h-auto ml-10"
       />
     </div>
   );

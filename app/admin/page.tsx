@@ -73,7 +73,7 @@ const AdminPage = () => {
               placeholder="Hai, this is AI voice assistant, can I help you today?"
               value={fileTitle}
               onChange={(e) => setFileTitle(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded input-custom"
+              className="modal-input w-full p-2 border border-gray-300 rounded bg-[#555] text-white"
             />
           </div>
 
@@ -101,9 +101,9 @@ const AdminPage = () => {
           <table className="w-full border-collapse border border-gray-300">
             <thead>
               <tr>
-                <th className="border border-gray-300 p-2">No.</th>
-                <th className="border border-gray-300 p-2">File Name</th>
-                <th className="border border-gray-300 p-2">Date</th>
+                <th className="border bg-[#AB04B1D9] border-gray-300 p-2">No.</th>
+                <th className="border bg-[#AB04B1D9] border-gray-300 p-2">File Name</th>
+                <th className="border bg-[#AB04B1D9] border-gray-300 p-2">Date</th>
               </tr>
             </thead>
             <tbody>
@@ -121,22 +121,22 @@ const AdminPage = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <button className="modal-close" onClick={handleCloseModal}>X</button>
-            <h2 className="modal-title text-white">Title</h2>
+          <div className="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+          <div className="modal-content bg-[#3C3C3C] p-6 rounded-lg relative">
+            <button className="modal-close absolute top-2 right-2 text-white" onClick={handleCloseModal}>X</button>
+            <h2 className="modal-title text-white mb-4">Title</h2>
             <input
               type="text"
               placeholder="Enter title here"
-              className="modal-input w-full p-2 border border-gray-300 rounded bg-[#555] text-white"
+              className="modal-input w-full p-2 border border-gray-300 rounded bg-[#555] text-white mb-4"
             />
-            <h3 className="modal-description text-white">Description</h3>
+            <h3 className="modal-description text-white mb-4">Description</h3>
             <input
               placeholder="Enter description here"
-              className="modal-textarea w-full p-2 border border-gray-300 rounded bg-[#555] text-white"
+              className="modal-textarea w-full p-2 border border-gray-300 rounded bg-[#555] text-white mb-4"
             />
             <div
-              className={`modal-file-upload ${dragging ? 'dragging' : ''} bg-[#555] p-4 text-white`}
+              className={`modal-file-upload ${dragging ? 'dragging' : ''} bg-[#555] p-4 text-white mb-4`}
               onDrop={handleDrop}
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
