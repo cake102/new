@@ -25,3 +25,8 @@ body {
     text-wrap: balance;
   }
 }
+
+.input-custom {
+  background-color: #828282;
+  color: #ffffff; /* Optional: Set text color to white for better contrast */
+}
